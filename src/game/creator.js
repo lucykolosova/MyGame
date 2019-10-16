@@ -2,6 +2,7 @@ import {
   addPCWin, addUserWin, gameInProgress, getGameMode, getGameWinners, setBoard,
 } from './action';
 import getRandomInt from './utils';
+import { API } from '../constants/constants';
 
 export function startGameCycle() {
   return (dispatch, getState) => {
@@ -83,7 +84,7 @@ export function startGame() {
 }
 
 export const getGameModeThunk = () => (dispatch) => {
-  fetch('https://starnavi-frontend-test-task.herokuapp.com/game-settings')
+  fetch(`${API}/game-settings`)
     .then(res => res.json())
     .then((response) => {
       dispatch(getGameMode(response));
@@ -92,7 +93,7 @@ export const getGameModeThunk = () => (dispatch) => {
 };
 
 export const getGameWinnersThunk = () => (dispatch) => {
-  fetch('https://starnavi-frontend-test-task.herokuapp.com/winners')
+  fetch(`${API}/winners`)
     .then(res => res.json())
     .then((response) => {
       dispatch(getGameWinners(response));
@@ -101,7 +102,7 @@ export const getGameWinnersThunk = () => (dispatch) => {
 };
 
 export const sendGameWinnersThunk = winner => (dispatch) => {
-  fetch('https://starnavi-frontend-test-task.herokuapp.com/winners', {
+  fetch(`${API}/winners`, {
     method: 'POST',
     body: JSON.stringify(winner),
     headers: {
