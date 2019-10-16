@@ -1,0 +1,20 @@
+.table {
+  width: 600px;
+  height: 440px;
+  margin: 20px auto;
+  overflow: auto;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  &__cell {
+    border: 1px solid grey;
+    width: 100%;
+    text-align: center;
+  }
+}

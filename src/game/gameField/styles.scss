@@ -1,0 +1,55 @@
+@import "../../constants/variables";
+
+.gameContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 510px;
+
+  &--easy {
+    width: 510px;
+  }
+
+  &--normal {
+    width: 510px;
+  }
+
+  &--hard {
+    width: 615px;
+  }
+}
+
+.item {
+  height: 100px;
+  width: 100px;
+  border-radius: 4px;
+  border: 1px solid $black;
+
+  &--normal {
+    height: 50px;
+    width: 50px;
+  }
+
+  &--hard {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.gameCounter {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.active {
+  background: $active;
+}
+
+.PCWin {
+  background: $winPc;
+}
+
+.userWin {
+  background: $winHuman;
+}

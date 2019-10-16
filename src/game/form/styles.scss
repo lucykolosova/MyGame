@@ -1,0 +1,93 @@
+@import "../../constants/variables";
+
+.dropdown {
+  display: none;
+
+  &__menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    border: 1px solid $black;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    width: 150px;
+    margin: 0;
+  }
+
+  &__item {
+    height: 30px;
+    padding: 0 5px;
+    background: transparent;
+    transition: .5ms;
+    line-height: 30px;
+    outline: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    &:hover {
+      background: $gray;
+    }
+  }
+
+  &--open {
+    display: block;
+    width: 150px;
+    margin: 0;
+    position: absolute;
+    background: $white;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: 20px auto;
+
+  &__select {
+    list-style-type: none;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  &__select-item {
+    height: 30px;
+    border-radius: 4px;
+    list-style-type: none;
+    border: 1px solid $black;
+    padding: 5px;
+    text-align: left;
+    text-transform: uppercase;
+
+    &--open {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  &__input {
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid $black;
+  }
+
+  &__button {
+    height: 30px;
+    width: 106px;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid $black;
+    text-transform: uppercase;
+    background: $white;
+
+    &:disabled {
+      opacity: .5;
+    }
+  }
+}
